@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+    <h:head>
+        <title>Login</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <table>
+                <tr>
+                    <td>
+                        <h:outputText value="Login:"/>
+                    </td>
+                    <td>
+                        <h:inputText value="#{loginBean.login}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h:outputText value="Senha:"/>
+                    </td>
+                    <td>
+                        <h:inputSecret value="#{loginBean.senha}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        Lembrar <h:selectBooleanCheckbox value="#{loginBean.lembreme}"/>
+                    </td>
+                </tr>
+            </table>
+            <h:commandButton action="#{loginBean.login}" value="Login"/>
+        </h:form>
+    </h:body>
+</html>
+
