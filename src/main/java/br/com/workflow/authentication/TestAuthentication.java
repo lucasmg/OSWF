@@ -35,7 +35,7 @@ public class TestAuthentication {
         }
         if (!currentUser.isAuthenticated()) {
             // se nao estiver entao inicia o login
-            UsernamePasswordToken token = new UsernamePasswordToken("test", "test");
+            UsernamePasswordToken token = new UsernamePasswordToken("admin", "admin");
             token.setRememberMe(true);
 
             try {
@@ -45,8 +45,8 @@ public class TestAuthentication {
                 System.out.println(currentUser.getPrincipal());
 
                 // verificando roles
-                if (currentUser.hasRole("admin")) {
-                    System.out.println("you are admin");
+                if (currentUser.hasRole("ADMIN")) {
+                    System.out.println("you are ADMIN");
                 } else {
                     System.out.println("you aren't admin");
                 }

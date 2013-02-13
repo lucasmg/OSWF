@@ -37,7 +37,7 @@ public class FilterLoginPage implements Filter {
         if (currentUser.isAuthenticated()) {
             HttpServletRequest req = (HttpServletRequest) request;
             HttpServletResponse res = (HttpServletResponse) response;
-            res.sendRedirect(req.getContextPath() + "/index.jsf");
+            res.sendRedirect(req.getContextPath() + "/nav.jsp");
         } else {
             chain.doFilter(request, response);
         }

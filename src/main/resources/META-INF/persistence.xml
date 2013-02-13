@@ -4,6 +4,8 @@
     <provider>org.hibernate.ejb.HibernatePersistence</provider>
     <class>br.com.workflow.model.entities.Usuario</class>
     <class>br.com.workflow.model.entities.Realm</class>
+    <class>br.com.workflow.model.entities.WorkFlow</class>
+    <class>br.com.workflow.model.entities.CurrentStep</class>
     <properties>
       <property name="hibernate.dialect" value="org.hibernate.dialect.Oracle10gDialect"/>
       <!--      <property name="hibernate.connection.driver_class" value="org.apache.derby.jdbc.ClientDriver"/>-->

@@ -19,6 +19,7 @@ import javax.persistence.Query;
  */
 public class UsuarioDao extends DataAccessObjectAbstract<Usuario> {
 
+    @Override
     public void merge(Usuario entidade) {
         EntityTransaction transaction = getEm().getTransaction();
         try {

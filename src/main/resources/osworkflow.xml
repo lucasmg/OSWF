@@ -1,6 +1,0 @@
-<osworkflow>
-    <persistence class="br.com.workflow.osworkflow.JPAWorkFlowStore"/>
-<!--    <factory class= "com.opensymphony.workflow.loader.XMLWorkflowFactory">
-        <property key="resource" value="workflows.xml" />
-    </factory>-->
-</osworkflow>
