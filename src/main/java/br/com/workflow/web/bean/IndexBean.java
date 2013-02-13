@@ -4,7 +4,6 @@
  */
 package br.com.workflow.web.bean;
 
-import br.com.workflow.model.entities.Usuario;
 import java.io.Serializable;
 import javax.enterprise.context.RequestScoped;
 import javax.faces.bean.ManagedBean;

@@ -24,36 +24,36 @@ import org.apache.shiro.subject.Subject;
  */
 @ManagedBean(name = "loginBean")
 @RequestScoped
-public class LoginBean {
-    
+public class LoginBean extends SystemBeanBase {
+
     private String login;
     private String senha;
     private boolean lembreme;
-    
+
     public String getLogin() {
         return login;
     }
-    
+
     public void setLogin(String login) {
         this.login = login;
     }
-    
+
     public String getSenha() {
         return senha;
     }
-    
+
     public void setSenha(String senha) {
         this.senha = senha;
     }
-    
+
     public boolean isLembreme() {
         return lembreme;
     }
-    
+
     public void setLembreme(boolean lembreme) {
         this.lembreme = lembreme;
     }
-    
+
     public String login() {
         Subject currentUser = SecurityUtils.getSubject();
         if (!currentUser.isAuthenticated()) {
@@ -72,13 +72,5 @@ public class LoginBean {
             }
         }
         return null;
-    }
-    
-    public String logoff() {
-        Subject currentUser = SecurityUtils.getSubject();
-        if (currentUser.isAuthenticated()) {
-            currentUser.logout();
-        }
-        return "login";
     }
 }

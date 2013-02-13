@@ -6,6 +6,7 @@ package br.com.workflow.web.bean;
 
 import br.com.workflow.model.entities.Usuario;
 import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.subject.Subject;
 
 /**
  *
@@ -24,5 +25,13 @@ public class SystemBeanBase {
             return null;
         }
         return this.usuario;
+    }
+
+    public String logoff() {
+        Subject currentUser = SecurityUtils.getSubject();
+        if (currentUser.isAuthenticated()) {
+            currentUser.logout();
+        }
+        return "login";
     }
 }
